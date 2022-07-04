@@ -26,3 +26,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/menusu', function () {
+    return view('layouts.menu');
+})->middleware('auth');
