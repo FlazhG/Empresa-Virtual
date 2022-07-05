@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CursoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,6 @@ Route::middleware([
 Route::get('/menusu', function () {
     return view('layouts.menu');
 })->middleware('auth');
+
+// RUTAS CURSO
+Route::resource('cursos', CursoController::class)->middleware('auth');

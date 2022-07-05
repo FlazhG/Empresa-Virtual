@@ -89,7 +89,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ url('/cursos') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Mis cursos</p>
                                     </a>
