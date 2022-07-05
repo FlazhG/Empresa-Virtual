@@ -30,7 +30,21 @@ class CursoController extends Controller
         'users.name')->get();
        return view('curso.report')->with($datos)->with($consulta)->with('users', $users);
     }
-
+    public function tomarcursos()
+    {
+      $users = User::all();
+      $datos['cursos'] = Curso::all();
+      $consulta['cursos'] = Curso::join('users', 'cursos.id','=','users.id')
+      ->select(
+        'cursos.id_curso',
+        'cursos.nombre_curso',
+        'cursos.descripcion',
+        'cursos.precio',
+        'cursos.clases',
+        'users.id',
+        'users.name')->get();
+       return view('curso.report2')->with($datos)->with($consulta)->with('users', $users);
+    }
     /**
      * Show the form for creating a new resource.
      *

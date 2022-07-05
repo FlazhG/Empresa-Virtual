@@ -34,3 +34,4 @@ Route::get('/menusu', function () {
 
 // RUTAS CURSO
 Route::resource('cursos', CursoController::class)->middleware('auth');
+Route::get('tomacursos', [CursoController::class, 'tomarcursos'])->name('tomacursos.tomarcursos')->middleware('auth');
