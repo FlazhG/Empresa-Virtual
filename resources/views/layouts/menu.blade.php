@@ -24,6 +24,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- fontawesome cnd -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS chat -->
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+		<link rel="stylesheet" href="{{asset('css/chat.css')}}">
     <!-- otra cosa -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -112,15 +115,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                               <li class="nav-item">
-                                  <a href="#" class="nav-link">
+                                  <a href="{{ url('/chat') }}" class="nav-link">
                                       <i class="far fa-circle nav-icon"></i>
-                                      <p>Reporte</p>
+                                      <p>Chat personal</p>
                                   </a>
                               </li>
                               <li class="nav-item">
                                   <a href="#" class="nav-link">
                                       <i class="far fa-circle nav-icon"></i>
-                                      <p>Póliza de seguro</p>
+                                      <p>Salas</p>
                                   </a>
                               </li>
                             </ul>
@@ -159,12 +162,11 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('menu/js/pages/dashboard.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <!-- Catalogo document -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- JS chat -->
+		<script  src="{{asset('js/app.js')}}"></script>
+		<script  src="{{asset('js/chat.js')}}"></script>
     @yield('js')
 </body>
 
